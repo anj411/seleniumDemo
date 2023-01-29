@@ -9,18 +9,20 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.util.Constant;
+
 public class CategoryExcelData {
 
 	public XSSFRow getRow() throws IOException {
 		
-		File file =    new File("C:\\Program Files\\Git\\testDemo\\shoponlineData.xlsx");
+		File file =    new File("C:\\Program Files\\Git\\testDemo\\CategoryData.xlsx");
 		FileInputStream inputStream = new FileInputStream(file);
 		
 		XSSFWorkbook wb = new XSSFWorkbook(inputStream);
 		
-		XSSFSheet sheet = wb.getSheetAt(0);
+		XSSFSheet sheet = wb.getSheetAt(Constant.cell_0);
 		
-		XSSFRow row1 = sheet.getRow(5);
+		XSSFRow row1 = sheet.getRow(Constant.cell_1);
 		
 		return row1;
 		
@@ -29,7 +31,7 @@ public class CategoryExcelData {
 	public String getCategoryName() throws IOException {
 		
 		XSSFRow row1 = getRow();
-		XSSFCell cellName = row1.getCell(0);		
+		XSSFCell cellName = row1.getCell(Constant.cell_0);		
 		String categoryName = cellName.getStringCellValue(); 
 		return categoryName;
 		
@@ -38,8 +40,9 @@ public class CategoryExcelData {
 	public String getCategoryImage() throws IOException {
 		
 		XSSFRow row1 = getRow();
-		XSSFCell cellImage = row1.getCell(1);
-		String categoryImage = cellImage.getStringCellValue();  
+		XSSFCell cellImage = row1.getCell(Constant.cell_1);
+		String categoryImage = cellImage.getStringCellValue(); 
+		System.out.println(categoryImage);
 		return categoryImage;
 		
 	}

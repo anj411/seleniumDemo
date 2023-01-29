@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ConfigFileReader {
 
 	private Properties properties;
-	private final String propertyFilePath= "config//Config.properties";
+	private final String propertyFilePath= "C://Program Files//Git//testDemo//src//main//resources//Config.properties";
 
 	
 	public ConfigFileReader() {

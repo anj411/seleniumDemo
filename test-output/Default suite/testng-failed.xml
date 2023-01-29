@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testProject.testDemo.ShoponlineApplicationTests">
+      <class name="com.adminTestModule.DeleteCategoryTest">
         <methods>
-          <include name="adminLogin"/>
+          <include name="testEnd"/>
+          <include name="deleteCategory"/>
+          <include name="testInitiallize"/>
         </methods>
-      </class> <!-- com.testProject.testDemo.ShoponlineApplicationTests -->
+      </class> <!-- com.adminTestModule.DeleteCategoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
